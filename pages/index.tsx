@@ -12,16 +12,7 @@ export default function Home() {
   const [emails, setEmails] = useState<Email[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-/*
-  useEffect(() => {
-    if (session) {
-      fetch('/api/fetchEmails')
-        .then((res) => res.json())
-        .then((data) => setEmails(data.emails))
-        .catch((err) => console.error('Error fetching emails:', err));
-    }
-  }, [session]);
-*/
+
   useEffect(() => {
     // Fetch emails when the component mounts
     const fetchEmails = async () => {
