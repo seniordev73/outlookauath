@@ -6,10 +6,10 @@ export default NextAuth({
         AzureADProvider({
             clientId: process.env.OUTLOOK_CLIENT_ID!,
             clientSecret: process.env.OUTLOOK_CLIENT_SECRET!,
-            tenantId: process.env.OUTLOOK_TENANT_ID!,
+            tenantId: "common", // This allows both personal and work/school accounts to sign in
             authorization: {
                 params: {
-                    scope: 'openid email profile offline_access https://outlook.office.com/IMAP.AccessAsUser.All',
+                    scope: 'https://outlook.office.com/IMAP.AccessAsUser.All openid email profile offline_access',
                 },
             },
         }),
