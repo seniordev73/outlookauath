@@ -4,8 +4,8 @@ import AzureADProvider from 'next-auth/providers/azure-ad';
 export default NextAuth({
     providers: [
         AzureADProvider({
-            clientId: process.env.OUTLOOK_CLIENT_ID!,
-            clientSecret: process.env.OUTLOOK_CLIENT_SECRET!,
+            clientId: "e4d04abc-7db4-4949-9f8a-e40becb4f698",
+            clientSecret: "22d0c48d-a9ec-4183-9767-34d8cbcacbfc",
             tenantId: "common", // This allows both personal and work/school accounts to sign in
             authorization: {
                 params: {
